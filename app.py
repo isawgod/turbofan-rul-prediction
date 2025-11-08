@@ -61,7 +61,6 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-st.caption("🧠 Consulting-grade demo for predictive maintenance & reliability analytics.")
 st.divider()
 
 # ---------- Local imports (support both module and script runs) ----------
