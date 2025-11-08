@@ -1,0 +1,23 @@
+# data (keep only readme/instructions if any)
+data/*
+!data/README.md
+
+# models (keep only important model files)
+!models/model_metadata.json
+!models/rul_gb_fd001.joblib
+
+# notebooks cache
+*.ipynb_checkpoints
+
+# python cache
+__pycache__/
+*.pyc
+
+# system junk
+.DS_Store
+
+# outputs / samples (allow samples folder, but ignore big outputs on root)
+predictions.csv
+
+# streamlit
+.streamlit/
