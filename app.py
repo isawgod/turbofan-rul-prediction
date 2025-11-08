@@ -10,15 +10,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import joblib
 
-# --- PAGE CONFIG ---
-st.set_page_config(
-    page_title="Turbofan RUL Predictor",
-    page_icon="✈️",
-    layout="wide",
-    initial_sidebar_state="collapsed"
-)
+# --- CONSULTING DARK HERO (FIXED) ---
+st.set_page_config(page_title="Turbofan RUL Predictor", page_icon="✈️", layout="wide")
 
-# --- CUSTOM HERO SECTION (Consulting Dark Style) ---
 st.markdown(
     """
     <style>
@@ -93,11 +87,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
-st.caption(
-    "🧠 Built for predictive maintenance and reliability analytics — a consulting-grade demonstration of turbofan Remaining Useful Life (RUL) prediction."
-)
-st.divider()
 
 
 # --- Local imports (support both module and script run) ---
