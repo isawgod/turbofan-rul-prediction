@@ -10,6 +10,96 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import joblib
 
+# --- PAGE CONFIG ---
+st.set_page_config(
+    page_title="Turbofan RUL Predictor",
+    page_icon="✈️",
+    layout="wide",
+    initial_sidebar_state="collapsed"
+)
+
+# --- CUSTOM HERO SECTION (Consulting Dark Style) ---
+st.markdown(
+    """
+    <style>
+    .hero {
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        color: #f0f0f0;
+        text-align: center;
+        padding: 3rem 1rem 2.5rem 1rem;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        margin-bottom: 2rem;
+    }
+    .hero h1 {
+        font-size: 2.6rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: #ffffff;
+    }
+    .hero p {
+        font-size: 1.1rem;
+        color: #d0d0d0;
+        margin-top: 0.3rem;
+    }
+    .hero img {
+        margin-top: 1.5rem;
+        border-radius: 10px;
+        width: 60%;
+        max-width: 700px;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+    }
+    .metric-container {
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        margin-top: 2rem;
+    }
+    .metric {
+        text-align: center;
+    }
+    .metric h3 {
+        font-size: 1rem;
+        color: #aaa;
+        margin-bottom: 0.4rem;
+    }
+    .metric p {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: #fff;
+    }
+    </style>
+
+    <div class="hero">
+        <h1>✈️ Turbofan Remaining Useful Life Predictor</h1>
+        <p>Predictive Maintenance · NASA CMAPSS · Gradient Boosting Regressor</p>
+        <img src="https://raw.githubusercontent.com/isawgod/turbofan-rul-prediction/main/assets/app_screenshot.png" alt="App Screenshot">
+
+        <div class="metric-container">
+            <div class="metric">
+                <h3>Model</h3>
+                <p>Gradient Boosting</p>
+            </div>
+            <div class="metric">
+                <h3>Mean Abs. Error</h3>
+                <p>≈ 6.38 cycles</p>
+            </div>
+            <div class="metric">
+                <h3>Dataset</h3>
+                <p>NASA CMAPSS FD001</p>
+            </div>
+        </div>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+st.caption(
+    "🧠 Built for predictive maintenance and reliability analytics — a consulting-grade demonstration of turbofan Remaining Useful Life (RUL) prediction."
+)
+st.divider()
+
+
 # --- Local imports (support both module and script run) ---
 try:
     # If running as a module (recommended with "python -m"), this works:
