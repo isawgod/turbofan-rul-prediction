@@ -1,5 +1,5 @@
 
-```markdown
+```
 # ✈️ Turbofan Engine Remaining Useful Life (RUL) — NASA CMAPSS (FD001)
 
 End-to-end predictive maintenance pipeline built to estimate **Remaining Useful Life (RUL)** for turbofan jet engines using the **NASA CMAPSS dataset**.  
@@ -17,7 +17,7 @@ This project replicates an industry-grade predictive maintenance workflow used i
 - 🧩 Auto feature engineering from raw sensor data
 - 📊 Interactive Streamlit dashboard for live predictions
 - 🛠 Modular code structure (ready for extension to FD002–FD004)
-
+```
 ---
 
 ## 📂 Repository Structure
@@ -192,14 +192,4 @@ Data Scientist | Battery & Predictive Analytics
 💻 [GitHub](https://github.com/isawgod)
 
 ---
-
-## 💡 Next Steps
-
-* Extend to **FD002–FD004** for multi-condition training
-* Add **LSTM-based RUL forecasting** for time-series enhancement
-* Integrate **MLflow + Docker** for experiment tracking & deployment
-
----
-
-```
 
