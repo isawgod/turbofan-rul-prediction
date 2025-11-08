@@ -1,5 +1,3 @@
-
-```
 # ✈️ Turbofan Engine Remaining Useful Life (RUL) — NASA CMAPSS (FD001)
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
@@ -22,7 +20,6 @@ Upload either:
 
 > *(If the app is rebuilding, please refresh after ~1 minute.)*
 
-
 ---
 
 ## 🧭 Overview
@@ -30,18 +27,17 @@ Upload either:
 This project replicates an industry-grade predictive maintenance workflow used in aerospace, automotive, and energy systems.
 
 **Core highlights:**
-- 🚀 Complete ML lifecycle: EDA → Feature Engineering → Modeling → Deployment
-- 🧠 Gradient Boosting Regressor (MAE ≈ **6.38 cycles**)
-- 🧩 Auto feature engineering from raw sensor data
-- 📊 Interactive Streamlit dashboard for live predictions
-- 🛠 Modular code structure (ready for extension to FD002–FD004)
-```
+- 🚀 Complete ML lifecycle: EDA → Feature Engineering → Modeling → Deployment  
+- 🧠 Gradient Boosting Regressor (MAE ≈ **6.38 cycles**)  
+- 🧩 Auto feature engineering from raw sensor data  
+- 📊 Interactive Streamlit dashboard for live predictions  
+- 🛠 Modular code structure (ready for extension to FD002–FD004)  
+
 ---
 
 ## 📂 Repository Structure
 
 ```
-
 .
 ├── app.py                          # Streamlit interface
 ├── models/
@@ -57,11 +53,10 @@ This project replicates an industry-grade predictive maintenance workflow used i
 │   └── train_and_export.py         # Reproducible training script
 ├── data/raw/                       # NASA CMAPSS (not included)
 └── assets/
-├── app_screenshot.png
-├── true_vs_pred.png
-├── error_hist.png
-└── permutation_importance.png
-
+    ├── app_screenshot.png
+    ├── true_vs_pred.png
+    ├── error_hist.png
+    └── permutation_importance.png
 ```
 
 ---
@@ -79,9 +74,7 @@ Each engine runs until failure under varying operational conditions.
 
 **Columns:**
 ```
-
 unit, cycle, setting_1, setting_2, setting_3, s01...s21
-
 ```
 
 **Target:** Remaining Useful Life (RUL)
@@ -103,12 +96,10 @@ Derived features:
 
 Final feature set used:
 ```
-
 cycle, cycle_norm,
 s04, s11, s12, s15, s17,
 s04_rollmean, s11_rollmean, s12_rollmean, s17_rollmean
-
-````
+```
 
 ---
 
@@ -127,15 +118,15 @@ Residuals show mild overestimation near end-of-life — typical in RUL tasks.
 ## 📈 Results & Visuals
 
 ### True vs Predicted RUL
-The model tracks actual degradation with strong alignment across engines.
+The model tracks actual degradation with strong alignment across engines.  
 ![true_vs_pred](assets/true_vs_pred.png)
 
 ### Error Distribution
-Prediction errors are centered close to zero — stable and consistent behavior.
+Prediction errors are centered close to zero — stable and consistent behavior.  
 ![error_hist](assets/error_hist.png)
 
 ### Permutation Importance
-Feature importance calculated via permutation — `cycle_norm` dominates, supported by voltage/temperature proxies.
+Feature importance calculated via permutation — `cycle_norm` dominates, supported by voltage/temperature proxies.  
 ![permutation_importance](assets/permutation_importance.png)
 
 ---
@@ -157,20 +148,18 @@ Features:
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
-````
+```
 
 ---
 
 ## 🧾 Example CLI usage
 
 #### Pre-computed features
-
 ```bash
 python -m src.predict --input features.csv --output predictions.csv
 ```
 
 #### Raw CMAPSS input (auto-FE ON)
-
 ```bash
 python -m src.predict --input raw.csv --output pred_raw.csv --auto-fe
 ```
@@ -179,11 +168,11 @@ python -m src.predict --input raw.csv --output pred_raw.csv --auto-fe
 
 ## 🔍 Key Insights
 
-* **Degradation is nonlinear:** performance drops accelerate after ~85% life.
-* **Sensor 11 & 15** correlate strongly with degradation curve slope.
-* **Temperature & voltage proxies** are reliable early indicators.
-* **Cycle normalization** critical for cross-unit generalization.
-* **MAE ≈ 6 cycles** confirms robust generalization across test units.
+* **Degradation is nonlinear:** performance drops accelerate after ~85% life.  
+* **Sensor 11 & 15** correlate strongly with degradation curve slope.  
+* **Temperature & voltage proxies** are reliable early indicators.  
+* **Cycle normalization** critical for cross-unit generalization.  
+* **MAE ≈ 6 cycles** confirms robust generalization across test units.  
 
 ---
 
@@ -191,7 +180,7 @@ python -m src.predict --input raw.csv --output pred_raw.csv --auto-fe
 
 | Category        | Tools              |
 | --------------- | ------------------ |
-| Language        | Python 3.10        |
+| Language        | Python 3.11        |
 | Data            | Pandas, NumPy      |
 | Modeling        | Scikit-learn (GBR) |
 | Visualization   | Matplotlib         |
@@ -202,12 +191,11 @@ python -m src.predict --input raw.csv --output pred_raw.csv --auto-fe
 
 ## 👨‍💻 Author
 
-**Przemyslaw Teodor Rydz**
-Data Scientist | Battery & Predictive Analytics
-📍 Norway
+**Przemyslaw Teodor Rydz**  
+Data Scientist | Battery & Predictive Analytics  
+📍 Norway  
 
-🔗 [LinkedIn](https://www.linkedin.com/in/przemyslaw-rydz-a2a55633b/)
-💻 [GitHub](https://github.com/isawgod)
+🔗 [LinkedIn](https://www.linkedin.com/in/przemyslaw-rydz-a2a55633b/)  
+💻 [GitHub](https://github.com/isawgod)  
 
 ---
-
