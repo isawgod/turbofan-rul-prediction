@@ -2,8 +2,26 @@
 ```
 # ✈️ Turbofan Engine Remaining Useful Life (RUL) — NASA CMAPSS (FD001)
 
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+![Tech: Streamlit](https://img.shields.io/badge/App-Streamlit-blue)
+![Model: GradientBoosting](https://img.shields.io/badge/Model-GradientBoosting-orange)
+![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
+![Status](https://img.shields.io/badge/Status-Production--Ready-success)
+
 End-to-end predictive maintenance pipeline built to estimate **Remaining Useful Life (RUL)** for turbofan jet engines using the **NASA CMAPSS dataset**.  
 Includes data engineering, ML modeling, and a production-ready **Streamlit app** for real-time inference.
+
+---
+
+## 🚀 Live Demo
+🎯 **Try it here:** [**Turbofan RUL Predictor — Streamlit App**](https://turbofan-rul-prediction-kcrxjxmwbjjiwc26ulfcw2.streamlit.app/)  
+
+Upload either:
+- **RAW CMAPSS data** (`unit, cycle, s01...s21`) → Auto-FE enabled  
+- **Precomputed feature dataset** → direct prediction  
+
+> *(If the app is rebuilding, please refresh after ~1 minute.)*
+
 
 ---
 
